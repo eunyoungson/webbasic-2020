@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강아지 설명</title>
+    <style>
+        body {background-color: rgb(182, 231, 182) ;
+                margin-left: 40px; margin-right: 40px;}
+        h1 { text-align: center; color: indigo;}
+        img { display: block;  width: 50%; margin:0 auto;}
+
+    </style>
+    <script>
+        function show() { // <img>에 달기
+            document.getElementById("fig").src = "dog1.jpg"
+        }
+        function hide() { // <img>에 제거
+            document.getElementById("fig").src = ""
+        }
+
+    </script>
+</head>
+<body>
+    <h1>강아지 </h1>
+    <img src="dog2.jpg" > 
+    <p>강아지는 개의 새끼를 일컫는다.[1] 갓 태어난 강아지의 체중은 견종에 따라 크게 차이가 나며 소형 견종들은 100~200g, 대형 견종들은 400~500g, 초대형 견종들은 700g 까지 나간다. 강아지는 성체로 발달하는 과정에 있으므로 자라면서 털색이나 체형 등이 달라질 수 있으며 정서적인 변화를 겪기도 한다. 여러가지 견종이 있으며 사람의 지시를 잘따르는 동물이다. 죽은 강아지를 자신의 소유가 아닌 산, 공원 등등의 장소에 묻으면 불법이며 최대 100만원 이하의 벌금을 낸다.</p>
+    <h3>강아지의 종류 </h3> 
+    <P><span onmouseover="show()" onmouseout="hide()">푸들</span> <br>
+        포메라니안<br>
+        요크셔테리어<br>
+        말티즈
+    </P>
+    <div><img id="fig" src="" width="300px"</div>
+    <h3>강아지의 사회화</h3>
+    <p>개는 매우 강한 사회성을 보이는 동물이며 강아지는 어미나 자신들끼리 노는 데 대부분의 시간을 보낸다. 사람과의 사회적 관계를 맺는 것은 8주에서 12주 무렵부터 이루어지며 점차 사람과 상호 반응하는 사회적 기술을 익히게 된다. 이 시기에 사람이나 성체 개로부터 위협을 겪으면 정서적으로 크게 위축될 수 있다.</p> <br>
+    <p>강아지는 주인 또는 우두머리로부터 통제받고 명령받는 것을 배워야 한다. 정확한 규칙과 규율에 따라 기르지 못한 개는 스트레스를 받으며 자신이 집단이나 가족의 리더가 되려고 하는 경향을 보인다.</p>
+
+
+
+</body>
+</html>
