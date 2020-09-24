@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갬블링게임과제</title>
+    <style>
+        .a { text-align: center; margin-bottom: 100px; margin-top: 150px;}
+        .b {text-align: center; }
+
+    </style>
+    <script>
+         /* window.onload = function() {
+            //문서객체 <div></div> 추가
+            let output = '';
+            for (let i=0; i<140; i++) {
+                output += '<div></div>';
+            }
+            //i숫자 조절 가능 ,원래는 256
+            document.body.innerHTML = output;
+
+            let divs = document.querySelectorAll('div');
+            for (let i= 0; i< divs.length; i++) {
+                let div =divs[i];
+                div.style.height = '2px';
+                div.style.background = `rgb(11,${i},${i})`; //숫자로써도 된다.
+            }
+
+        }; */
+    
+    let clickCount = 0;
+    let numbers =[];
+    let gameMoney = 10000;
+    let gameCount = 0 ;
+    function change(id) {        
+        let button = document.getElementById(id);                        
+        let random=  Math.floor(Math.random()*3);   
+        button.innerHTML = random ; 
+        clickCount ++; 
+        numbers.push(random);
+        if (clickCount === 3) {setTimeout (function() {
+            playGame(); })
+        }                          
+    } 
+      
+    function playGame() { 
+
+                //모두 같은 경우 +8000
+               if ( number[0]=== number[1] && number[0] === number[2] ) {
+                   gameMoney += 8000 }
+                //그외는 -1000 원    
+                else    
+                     gameMoney -= 1000         
+                gameCount ++ ;
+                clickCount = 0 ;
+                clickCount ++ ;
+                number = [];
+
+                let moneyDom = document.getElementById('money');
+                let countDom = document.getElementById('count');
+                let oneDom = document.getElementById('one');
+                let twoDom = document.getElementById('two');
+                let threeDom = document.getElementById('three');
+                moneyDom.innerHTML = gameMoney;
+                countDom.innerHTML =gameCount;
+                oneDom.innerHTML ='?';
+                twoDom.innerHTML ='?';
+                threeDom.innerHTML ='?';
+
+                
+    }     
+    </script>
+</head>
+<body>
+<div class="a">
+    <h1> 겜블링 게임</h1>
+    <p> 게임머니 : <span id="money">10000</span>원</p>
+    <p> 횟수 : <span id="count">0</span>번</p>
+</div>
+<div class="b">
+    <button id="one"  onclick="change('one');">?</button>
+    <button id="two" onclick="change('two');">?</button>
+    <button id="three" onclick="change('three');">?</button>
+</div>
+</body>
+</html>

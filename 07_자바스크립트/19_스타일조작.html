@@ -8,17 +8,17 @@
         window.onload = function() {
             //문서객체 <div></div> 추가
             let output = '';
-            for (let i=0; i<256; i++) {
+            for (let i=0; i<460; i++) {
                 output += '<div></div>';
             }
-
+            //i숫자 조절 가능 ,원래는 256
             document.body.innerHTML = output;
 
             let divs = document.querySelectorAll('div');
             for (let i= 0; i< divs.length; i++) {
                 let div =divs[i];
                 div.style.height = '2px';
-                div.style.background = `rgb(${i},${i},${i})`;
+                div.style.background = `rgb(11,${i},${i})`; //숫자로써도 된다.
             }
 
         };
