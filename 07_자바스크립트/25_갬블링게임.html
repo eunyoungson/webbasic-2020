@@ -50,7 +50,15 @@
                    gameMoney += 8000 }
                 //그외는 -1000 원    
                 else    
-                     gameMoney -= 1000         
+                     gameMoney -= 1000 
+                if (money === 0) {
+                alert('You lose!!!  Game Reset');
+                money = 10000;
+                numCount = 0;
+                } else {
+                    numCount++;
+                }
+
                 gameCount ++ ;
                 clickCount = 0 ;
                 clickCount ++ ;
