@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이터 객체속성</title>
+    <script>
+        let info =`
+            appCodeName: ${navigator.appCodeName}
+            appName: ${navigator.appName}
+            appVersion: ${navigator.appVersion}
+            platform: ${navigator.platform}
+            userAgent: ${navigator.userAgent}
+
+        `;
+
+         console.log(info); 
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
+            alert ('크롬브라우저');
+        } 
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
